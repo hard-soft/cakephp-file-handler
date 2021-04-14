@@ -1,0 +1,31 @@
+{
+    "name": "hard-soft/cakephp-file-handler",
+    "description": "Encode, upload, Parse, import CSV files",
+    "type": "cakephp-plugin",
+    "keywords": ["csv", "encoding", "utf8", "utf16", "utf7", "import", "cake3"],
+    "authors": [
+      {
+        "name": "Daniel Spöck",
+        "role": "Author"
+      }
+    ],
+    "require": {
+      "cakephp/cakephp": "3.9.*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^5.7|^6.0",
+      "cakephp/cakephp-codesniffer": "^3.0",
+      "php-coveralls/php-coveralls": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "FileHandler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EmailQueue\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+} 
