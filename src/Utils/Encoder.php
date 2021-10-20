@@ -38,7 +38,8 @@ class Encoder {
 
     public static function getDecodedData ($filepath, $to_encoding = "UTF-8", $from_encoding = null) {
         if (($data = @file_get_contents($filepath)) !== false) {
-            return mb_convert_encoding($data, $to_encoding, $from_encoding ?? Encoder::getEncoding($filepath));
+            $str =  mb_convert_encoding($data, $to_encoding, $from_encoding ?? Encoder::getEncoding($filepath));
+            return str_ireplace("\xef\xbb\xbf", '', $str);
         }
         return false;
     } 
