@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "cakephp/cakephp": "3.9.*",
+    "cakephp/cakephp": "^3.0",
     "league/csv": "^9.8"
   },
   "require-dev": {
